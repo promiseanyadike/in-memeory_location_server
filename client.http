@@ -9,8 +9,8 @@ Content-Type: application/json;charset=UTF-8
 
 ####
 
-GET http://location/abc123?max=2
+GET http://localhost:8080/location/abc123?max=2
 
 ####
 
-DELETE http://location/xyz987
+DELETE http://localhost:8080/location/xyz987
