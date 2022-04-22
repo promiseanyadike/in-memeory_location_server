@@ -4,6 +4,7 @@ import (
 	"context"
 	"in-memory_location_server/configuration"
 	"in-memory_location_server/logger"
+	"in-memory_location_server/route"
 	"in-memory_location_server/service"
 	"net/http"
 	"os"
@@ -26,7 +27,7 @@ func main() {
 	locationService := service.NewLocation(&repo)
 
 	// Init handler
-	handle := service.NewHandler(&locationService)
+	handle := route.NewHandler(&locationService)
 
 	srv := &http.Server{Addr: cf.ApiListener, Handler: handle}
 	log.Info().Msgf("Start service on http://%s", cf.ApiListener)

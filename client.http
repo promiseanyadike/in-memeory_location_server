@@ -1,0 +1,16 @@
+###
+POST http://localhost:8080/def456/now
+Content-Type: application/json;charset=UTF-8
+
+{
+	"lat": 12.34,
+	"lng": 56.78
+}
+
+####
+
+GET http://location/abc123?max=2
+
+####
+
+DELETE http://location/xyz987
