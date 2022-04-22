@@ -1,5 +1,5 @@
 ###
-POST http://localhost:8080/def456/now
+POST http://localhost:8080/location/def456/now
 Content-Type: application/json;charset=UTF-8
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json;charset=UTF-8
 
 ####
 
-GET http://localhost:8080/location/abc123?max=2
+GET http://localhost:8080/location/def456
 
 ####
 
