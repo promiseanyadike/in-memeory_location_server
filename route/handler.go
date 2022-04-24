@@ -32,7 +32,10 @@ func (h *ReportHandler) AddLocation(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
+	// Decode reads the next JSON-encoded value from its input and stores it in the value pointed to by v(payload)
+
 	payload := new(model.Location)
+
 	err := json.NewDecoder(r.Body).Decode(payload)
 	if err != nil {
 		log.Err(err).Send()
@@ -45,7 +48,7 @@ func (h *ReportHandler) AddLocation(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-
+	// the request from client is stored here(Decode(payload))
 	h.service.AppendLocation(orderId, *payload)
 	respondWithJSON(w, http.StatusOK, payload)
 }
@@ -100,7 +103,10 @@ func (h *ReportHandler) DeleteLocation(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	w.WriteHeader(http.StatusOK)
+	// w.WriteHeader(http.StatusOK)
+
+	respondWithJSON(w, http.StatusOK, "record deleted successfully")
+
 }
 
 // respondWithJSON write json response format

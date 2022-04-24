@@ -55,6 +55,6 @@ func main() {
 			})
 		}
 	}()
-	log.Warn().Msgf("Service started successfully")
+	log.Warn().Msgf("Server started successfully")
 	<-cleanupDone
 }

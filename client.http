@@ -1,5 +1,5 @@
 ###
-POST http://localhost:8080/location/def456/now
+POST http://localhost:8080/location/g4355678dsffd14424/now
 Content-Type: application/json;charset=UTF-8
 
 {
@@ -7,10 +7,28 @@ Content-Type: application/json;charset=UTF-8
 	"lng": 56.78
 }
 
-####
-
-GET http://localhost:8080/location/def456
 
 ####
 
-DELETE http://localhost:8080/location/xyz987
+###
+POST http://localhost:8080/location/g4355678dsffd14424/now
+Content-Type: application/json;charset=UTF-8
+
+{
+	"lat": 12.34,
+	"lng": 56.79
+}
+
+####
+
+GET http://localhost:8080/location/g4355678dsffd14424
+
+
+####
+
+GET http://localhost:8080/location/g4355678dsffd14424?max=2
+
+
+####
+
+DELETE http://localhost:8080/location/g4355678dsffd14424

@@ -10,6 +10,5 @@ type Location struct {
 }
 
 func (c Location) Validate() error {
-	return v.ValidateStruct(&c,
-	)
+	return v.ValidateStruct(&c)
 }
